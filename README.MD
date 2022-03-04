@@ -133,7 +133,7 @@ heroku login
 
 If you get the error `IP address mismatch` you can login interactively with userid/password.
 
-````java
+```java
 heroku login -i
 ```
 
