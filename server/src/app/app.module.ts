@@ -8,7 +8,7 @@ import { ScheduleDatabaseResetService } from './core/services/schedule-database-
 import { EmployeeSalariesModule } from './employee-salaries/employee-salaries.module';
 import { EmployeeModule } from './employee/employee.module';
 import { SalaryModule } from './salary/salary.module';
-export const productionMongoURI = "mongodb+srv://rajesh:<pwd>@cluster0.iwlez.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+export const productionMongoURI = "mongodb+srv://tmc:tmc@cluster0.zadqe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 export const localMongoURI = "mongodb://localhost:27017/employeeManagement";
 @Module({
   imports: [

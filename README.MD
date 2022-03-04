@@ -17,33 +17,39 @@ This project Is bootstrapped with [Create React App](https://github.com/facebook
 
 This project usages Yarn as package manager and in the project directory, you can run:
 
+### to start the mongoDB server Locally on port 27017:
+
+```java
+mongod
+```
+
 ### Root scripts
 
-| Client Script            | Description                                              |
-|--------------------------|----------------------------------------------------------|
-| `start:client`           | Starts the development server of client                  |
-| `start:server`           | Starts the development server of server                  |
-| `start:all`              | Starts the development server of client and server both  |
-| `install:server`         | Install server's npm packages                              |
-| `install:client`         | Install client's npm packages                              |
-| `install:server:client`  | Install server and client's npm packages                   |
-| `build:server`           | build client production                                  |
-| `build:client`           | build server production                                  |
-| `prepare`                | Install husky hooks after package Installs               |
+| Client Script           | Description                                             |
+| ----------------------- | ------------------------------------------------------- |
+| `start:client`          | Starts the development server of client                 |
+| `start:server`          | Starts the development server of server                 |
+| `start:all`             | Starts the development server of client and server both |
+| `install:server`        | Install server's npm packages                           |
+| `install:client`        | Install client's npm packages                           |
+| `install:server:client` | Install server and client's npm packages                |
+| `build:server`          | build client production                                 |
+| `build:client`          | build server production                                 |
+| `prepare`               | Install husky hooks after package Installs              |
 
->You can Ignore some of the weird looking commands they are related to heroku or netlify, but If you have experience with these platform and CI/CD pipeline go ahead 👍
+> You can Ignore some of the weird looking commands they are related to heroku or netlify, but If you have experience with these platform and CI/CD pipeline go ahead 👍
 
 <details>
   <summary># <b>Individual scripts</b></summary>
 
-| Client Script      | Description                               | Server Script      | Description                         |
-|--------------------|-------------------------------------------|--------------------|-------------------------------------|
-| `start:dev`        | Starts the development server             | `start`             | Starts the server                   |
-| `build`            | Production build                          | `start:dev`         | Starts the server in watch mode     |
-|  `test`            | Runs unit tests                           | `start:debug`       | Starts the server in debug mode     |
-|  `eject`           | [React Eject](https://bit.ly/2TOYE0A)     | `start:prod`        | Runs prod server, run `build` first |
-| `lint`             | Shows all the linting errors in codebase  | `lint`              | Fix all the liting errors           |
-| `lint:fix`         | Fix all the liting errors                 | `build`            | Production build                     |
+| Client Script | Description                              | Server Script | Description                         |
+| ------------- | ---------------------------------------- | ------------- | ----------------------------------- |
+| `start:dev`   | Starts the development server            | `start`       | Starts the server                   |
+| `build`       | Production build                         | `start:dev`   | Starts the server in watch mode     |
+| `test`        | Runs unit tests                          | `start:debug` | Starts the server in debug mode     |
+| `eject`       | [React Eject](https://bit.ly/2TOYE0A)    | `start:prod`  | Runs prod server, run `build` first |
+| `lint`        | Shows all the linting errors in codebase | `lint`        | Fix all the liting errors           |
+| `lint:fix`    | Fix all the liting errors                | `build`       | Production build                    |
 
 </details>
 
@@ -77,6 +83,7 @@ A quick look at the top-level files and directories you'll see in this project.
     ├── README.md
     ├── tailwind.config.js
     └── yarn.lock
+
 </details>
 <details>
   <summary>server</summary>
@@ -101,10 +108,61 @@ A quick look at the top-level files and directories you'll see in this project.
     ├── tsconfig.build.json
     ├── tsconfig.json
     └── yarn.lock
+
 </details>
 
 > `.vscode/`: This directory contains all of the workspace setting for vscode.
-> `.husky/`:  All the husky configuration.
+> `.husky/`: All the husky configuration.
+
+## Install the Heroku CLI
+
+Download and install the Heroku CLI.
+
+```java
+sudo snap install --classic heroku
+```
+
+If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.
+
+```java
+heroku login
+```
+
+If you get the error `IP address mismatch` you can login interactively with userid/password.
+
+````java
+heroku login -i
+```java
+
+### Create a new Git repository
+
+Initialize a git repository in a new or existing directory
+
+```java
+cd my-project/
+git init
+heroku git:remote -a employee-management-dashboard
+````
+
+### Deploy your application
+
+Commit your code to the repository and deploy it to Heroku using Git.
+
+```java
+git add .
+git commit -am "make it better"
+git push heroku master
+```
+
+You can now change your main deploy branch from "master" to "main" for both manual and automatic deploys, please follow the instructions here.
+
+### Existing Git repository
+
+For existing repositories, simply add the heroku remote
+
+```java
+heroku git:remote -a employee-management-dashboard
+```
 
 ## Deploy on cloud
 
