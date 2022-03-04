@@ -109,9 +109,12 @@ A quick look at the top-level files and directories you'll see in this project.
     ├── tsconfig.json
     └── yarn.lock
 
+Text here
+
 </details>
 
 > `.vscode/`: This directory contains all of the workspace setting for vscode.
+
 > `.husky/`: All the husky configuration.
 
 ## Install the Heroku CLI
@@ -132,7 +135,7 @@ If you get the error `IP address mismatch` you can login interactively with user
 
 ````java
 heroku login -i
-```java
+```
 
 ### Create a new Git repository
 
@@ -142,7 +145,13 @@ Initialize a git repository in a new or existing directory
 cd my-project/
 git init
 heroku git:remote -a employee-management-dashboard
-````
+```
+
+Output:
+
+```java
+set git remote heroku to https://git.heroku.com/employee-management-dashboard.git
+```
 
 ### Deploy your application
 
@@ -151,7 +160,7 @@ Commit your code to the repository and deploy it to Heroku using Git.
 ```java
 git add .
 git commit -am "make it better"
-git push heroku master
+git push heroku main
 ```
 
 You can now change your main deploy branch from "master" to "main" for both manual and automatic deploys, please follow the instructions here.
@@ -223,3 +232,4 @@ git commit -m "added husky and lint-stagged" // here you will notice the lint-st
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Rajesh-Royal/Employee-Management-Dashboard)
+````

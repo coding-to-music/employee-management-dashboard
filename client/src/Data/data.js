@@ -1,5 +1,7 @@
 export const projectData = {
-  repositoryUrl: "https://github.com/Rajesh-Royal/Employee-Management-Dashboard",
+  repositoryUrl:
+    "https://github.com/coding-to-music/employee-management-dashboard",
   graphqlServerLocal: "http://localhost:4000/graphql",
-  graphqlServerLive: "https://heroku-employee-mgmt.herokuapp.com/graphql",
+  graphqlServerLive:
+    "https://employee-management-dashboard.herokuapp.com/graphql",
 };

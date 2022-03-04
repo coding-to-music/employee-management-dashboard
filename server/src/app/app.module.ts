@@ -8,29 +8,29 @@ import { ScheduleDatabaseResetService } from './core/services/schedule-database-
 import { EmployeeSalariesModule } from './employee-salaries/employee-salaries.module';
 import { EmployeeModule } from './employee/employee.module';
 import { SalaryModule } from './salary/salary.module';
-export const productionMongoURI = "mongodb+srv://tmc:tmc@cluster0.zadqe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-export const localMongoURI = "mongodb://localhost:27017/employeeManagement";
+export const productionMongoURI =
+  'mongodb+srv://<userid>:<password>@cluster0.zadqe.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+export const localMongoURI = 'mongodb://localhost:27017/employeeManagement';
 @Module({
   imports: [
     GraphQLModule.forRoot({
       autoSchemaFile: 'schema.gql',
       playground: true,
-      context: ({ req }) => ({ req })
+      context: ({ req }) => ({ req }),
     }),
     ConfigModule.forRoot({ envFilePath: `${process.env.NODE_ENV}.env` }),
-    MongooseModule.forRoot(localMongoURI , {
+    MongooseModule.forRoot(localMongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
-      useCreateIndex: true
+      useCreateIndex: true,
     }),
     ScheduleModule.forRoot(),
     EmployeeModule,
     SalaryModule,
     EmployeeSalariesModule,
     AuthModule,
-    ScheduleDatabaseResetService
+    ScheduleDatabaseResetService,
   ],
-
 })
 export class AppModule {}
