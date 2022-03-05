@@ -39,6 +39,105 @@ mongod
 
 > You can Ignore some of the weird looking commands they are related to heroku or netlify, but If you have experience with these platform and CI/CD pipeline go ahead 👍
 
+start the mongoDB server Locally on port 27017:
+
+```java
+mongod
+```
+
+yarn start:all
+
+```java
+[2:01:16 AM] File change detected. Starting incremental compilation...
+[1] 
+[1] [Nest] 1152478   - 03/05/2022, 2:01:19 AM   [NestFactory] Starting Nest application...
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] AppModule dependencies initialized +105ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] MongooseModule dependencies initialized +2ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] PassportModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] ScheduleDatabaseResetService dependencies initialized +0ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] JwtModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] DiscoveryModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] ConfigHostModule dependencies initialized +0ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] ScheduleModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] ConfigModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] GraphQLSchemaBuilderModule dependencies initialized +0ms
+[1] [Nest] 1152478   - 03/05/2022, 2:01:20 AM   [InstanceLoader] GraphQLModule dependencies initialized +1ms
+[0] Compiled successfully!
+[0] 
+[0] You can now view employee-dashboard-client in the browser.
+[0] 
+[0]   http://localhost:3000
+[0] 
+[0] Note that the development build is not optimized.
+[0] To create a production build, use yarn build.
+[0] 
+[1] [Nest] 1152478   - 03/05/2022, 2:01:50 AM   [MongooseModule] Unable to connect to the database. Retrying (1)... +29993ms
+[1] [Nest] 1152478   - 03/05/2022, 2:02:23 AM   [MongooseModule] Unable to connect to the database. Retrying (2)... +33009ms
+[1] [Nest] 1152478   - 03/05/2022, 2:02:56 AM   [MongooseModule] Unable to connect to the database. Retrying (3)... +33008ms
+[1] [Nest] 1152478   - 03/05/2022, 2:03:29 AM   [MongooseModule] Unable to connect to the database. Retrying (4)... +33005ms
+[1] [Nest] 1152478   - 03/05/2022, 2:04:02 AM   [MongooseModule] Unable to connect to the database. Retrying (5)... +33007ms
+[1] [Nest] 1152478   - 03/05/2022, 2:04:35 AM   [MongooseModule] Unable to connect to the database. Retrying (6)... +33005ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] MongooseCoreModule dependencies initialized +30628ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] MongooseModule dependencies initialized +15ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] MongooseModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] MongooseModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] MongooseModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] MongooseModule dependencies initialized +0ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] EmployeeSalariesModule dependencies initialized +66ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] AuthModule dependencies initialized +2ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] SalaryModule dependencies initialized +3ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] SalaryStructureModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:05 AM   [InstanceLoader] EmployeeModule dependencies initialized +1ms
+[1] [Nest] 1152478   - 03/05/2022, 2:05:06 AM   [NestApplication] Nest application successfully started +483ms
+[1] Server started listening at PORT:  4000
+```
+
+## Routes
+
+## Development / Local
+
+### App server
+
+http://localhost:3000/graphql
+http://localhost:3000/auth/login
+http://localhost:3000/auth/signup
+
+### GraphQL server
+
+http://localhost:4000/
+
+### MongoDB
+
+http://localhost:27017/
+
+
+## Production
+
+### Heroku App Server
+
+https://dashboard.heroku.com/apps/employee-management-dashboard
+https://employee-management-dashboard.herokuapp.com/graphql
+https://employee-management-dashboard.herokuapp.com
+https://devcenter.heroku.com/articles/logging#view-logs
+heroku logs
+
+### Netlify GraphQL Server
+
+Note, the above might be incorrect:
+Server directory: Heroku should be the Server for GraphQL, but Netlify is the Server for the App.
+Client directory: Netlify should be the Client
+
+### MongoDB
+
+https://cloud.mongodb.com/v2/6146f93a165852010c2e7399#clusters
+
+Grant access to the MongoDB cluster
+https://cloud.mongodb.com/v2/6146f93a165852010c2e7399#security/network/accessList
+
+Data Lake
+https://cloud.mongodb.com/v2/6146f93a165852010c2e7399#dataLakes
+
+
 <details>
   <summary># <b>Individual scripts</b></summary>
 
